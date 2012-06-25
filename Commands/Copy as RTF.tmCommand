@@ -23,7 +23,7 @@ Pasteboard.new.put([[Pasteboard::Type::RTF, doc.to_s]])
 	<key>name</key>
 	<string>Copy as RTF</string>
 	<key>output</key>
-	<string>openAsNewDocument</string>
+	<string>discard</string>
 	<key>uuid</key>
 	<string>6F9D791B-B8E5-456D-A574-1B5C71F232FF</string>
 </dict>
