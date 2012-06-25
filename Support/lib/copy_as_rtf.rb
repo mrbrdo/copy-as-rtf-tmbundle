@@ -253,12 +253,11 @@ RTF_DOC
   def push_style name
     cur = current_style
     new_style = get_style_recursive(name.split('.'), @styles)
-    # p "current: #{cur.inspect}"
     new_style = cur.merge new_style if new_style
     new_style ||= cur || {}
     unless new_style[:color_index]
       #45 works for Sunburst theme; 0 for Eiffle or IDLE theme
-      new_style[:color_index] = (@body_bg == '#000000') ? 45 : 0
+      new_style[:color_index] = (@body_bg == '#000000') ? 45 : 1
     end
     @style_stack.unshift new_style
     new_style

@@ -10,6 +10,9 @@ require "rubygems"
 require "pasteboard"
 doc = RtfExporter.new.generate_rtf( STDIN.read )
 Pasteboard.new.put([[Pasteboard::Type::RTF, doc.to_s]])
+#File.open("/Users/mrbrdo/t.txt", "w") do |f|
+#  f.write doc
+#end
 </string>
 	<key>input</key>
 	<string>selection</string>
@@ -20,7 +23,7 @@ Pasteboard.new.put([[Pasteboard::Type::RTF, doc.to_s]])
 	<key>name</key>
 	<string>Copy as RTF</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>openAsNewDocument</string>
 	<key>uuid</key>
 	<string>6F9D791B-B8E5-456D-A574-1B5C71F232FF</string>
 </dict>
